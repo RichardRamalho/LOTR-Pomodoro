@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-br" class="" >
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Temporizador estilo Pomodoro">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Yatra+One&display=swap" rel="stylesheet">
+    
+    <title>LOTR Pomodoro</title>
+    
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./JS/main.js" defer></script>
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    
+    <link rel="shortcut icon" href="./src/image/icons8-one-ring-48.png" type="image/x-icon">
+  </head>
+  <body>
+    <div id="app">
+        <div class="timer-controls">
+            <section id="timer" class="flex">
+                <span id="minutes">25</span>
+                <span>:</span>
+                <span id="seconds">00</span>
+            </section>
+            
+            <section id="controls" class="flex">
+                <button 
+                    data-action="toggleRunning"
+                    class="ph ph-play-circle"
+                    data-sound="buttonClick"
+                    >
+                    <span class="sr-only">Iniciar contador</span>
+                </button>
+
+                <button
+                    data-action="toggleRunning"
+                    class="ph ph-pause-circle"
+                    data-sound="buttonClick"
+                    >
+                    <span class="sr-only">Pausar contador</span>
+                </button>
+
+                <button 
+                    data-action="reset"
+                    class="ph ph-stop-circle"
+                    data-sound="buttonClick"
+                    >
+                    <span class="sr-only">Resetar contador</span>
+                </button>
+
+                <button 
+                    data-action="increment"
+                    class="ph ph-plus-circle secondary"
+                    data-sound="buttonClick"
+                    >
+                    <span class="sr-only">Adicionar time</span>
+                </button>
+                <button 
+                    data-action="decrement"
+                    class="ph ph-minus-circle secondary"
+                    data-sound="buttonClick"
+                    >
+                    <span class="sr-only">Ajustar contador</span>
+                </button>
+                <audio id="timerEndSound" src="./src/song/TheHornofGondor. (256 kbps).mp3"></audio>
+                <audio id="buttonClick" src="./src/song/assets_sounds_audios_button-press.wav"></audio>
+                
+            </section>
+        </div>
+
+        <section id="cards">
+            <button 
+                id="hobbits"
+                class="lotr-button"
+                data-sound="hobbitsSound"
+                 >
+                 <audio id="hobbitsSound" src="./src/song/Y2meta.app - Lord Of The Rings_ Concerning Hobbits 🌳 (lofi remix) (192 kbps).mp3"></audio>
+                <img src="./src/image/icons8-frodo-48.png" alt="">
+        </button>
+
+        <button 
+                id="gandalf"
+                class="lotr-button"
+                data-sound="gandalfSound"
+                 >
+                 <audio id="gandalfSound" src="./src/song/Y2meta.app - gandalf's fall ~ tolkien lofi (192 kbps).mp3"></audio>
+                <img src="./src/image/icons8-gandalf-48.png" alt="">
+        </button>
+
+        <button 
+                id="the-ring"
+                class="lotr-button"
+                data-sound="theRingSound"
+                 >
+                 <audio id="theRingSound" src="./src/song/Y2meta.app - Lord Of The Rings_ The Destruction Of The Ring (lofi remix) [feat. @TanoshiSan] (192 kbps).mp3"></audio>
+                <img src="./src/image/icons8-one-ring-48.png" alt="">
+        </button>
+
+        <button 
+                id="legolas"
+                class="lotr-button"
+                data-sound="legolasSound"
+                 >
+                 <audio id="legolasSound" src="./src/song/Y2meta.app - Lord Of The Rings_ The Fellowship's Theme (lofi remix) (128 kbps).mp3"></audio>
+                <img src="./src/image/icons8-legolas-48.png" alt="">
+        </button>
+        </section>
+    </div>
+  </body>
