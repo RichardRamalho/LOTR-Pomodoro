@@ -130,3 +130,26 @@ html:not(.music-on) .ph-speaker-high {
   transform: scale(1.1);
   background-color: hsl(13, 23%, 28%);
 }
+
+@media screen and (max-width: 599px) {
+  #app {
+    display: block;
+    width: 100%;
+  }
+
+  #cards {
+    display: flex;
+  }
+
+  #hobbits,
+  #gandalf,
+  #the-ring,
+  #legolas {
+    width: 10rem;
+    height: 8rem;
+    margin-top: 5rem;
+    background-color: var(--card-color);
+    border-radius: 1.6rem;
+    transition: all 700ms ease-out;
+  }
+}
